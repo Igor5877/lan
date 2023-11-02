@@ -1,0 +1,44 @@
+/*-- DrLeonardo styles refactor --*/
+
+@import "../../styles/global.css";
+@import "../../styles/variables.css";
+
+.leftPane {
+    -fx-background-color: rgba(41, 46, 81, 1);
+}
+
+.Bold {
+    -fx-font-size:30;
+    -fx-text-fill:#fff;
+}
+.iconButton {
+    -fx-cursor: hand;
+    -fx-scaleX: 0.1;
+    -fx-scaleY: 0.1;
+}
+#serverPane {
+     -fx-background-color: transparent/* rgba(29, 29, 60, 1); */
+}
+#bgServer {
+    -fx-background-color: rgba(29, 29, 60, 1) !important;
+}
+#logout SVGPath {
+    -fx-fill: rgba(255, 255, 255, 0.5);
+}
+#logout:hover SVGPath {
+    -fx-fill: rgba(255, 255, 255, 0.7);
+}
+#launcher_skin_button {
+    -fx-text-fill: rgba(255, 255, 255, 0.5);
+}
+#launcher_skin_button SVGPath {
+    -fx-fill: rgba(255, 255, 255, 0.5);
+}
+#launcher_skin_button:hover SVGPath {
+    -fx-text-fill: rgba(255, 255, 255, 0.5);
+    -fx-fill: rgba(255, 255, 255, 0.7);
+}
+#launcher_skin_button:hover {
+    -fx-text-fill: rgba(255, 255, 255, 0.7);
+}
+/*-- DrLeonardo styles refactor --*/

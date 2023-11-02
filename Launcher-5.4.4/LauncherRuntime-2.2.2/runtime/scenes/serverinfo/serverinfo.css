@@ -1,0 +1,75 @@
+/*-- DrLeonardo styles refactor --*/
+
+@import "../../styles/global.css";
+@import "../../styles/variables.css";
+
+/*-- Информация сервера --*/
+#server-detail {
+    -fx-background-color: -fx-grayTr;
+    -fx-background-radius: 20px;
+}
+#server-detail > #serverName {
+    -fx-font-weight: bold;
+    -fx-font-size: 24px;
+    -fx-text-color: -fx-black2C;
+}
+#server-detail > #serverDescription {
+    -fx-font-style: normal;
+    -fx-font-weight: normal;
+    -fx-font-size: 14px;
+    -fx-text-fill: rgba(255, 255, 255, 0.7);
+}
+.iconButtonLeft {
+    -fx-fill: rgba(255, 255, 255, 0.5);
+}
+
+#home_button {
+    -fx-text-fill: rgba(255, 255, 255, 0.5);
+}
+#home_button:hover Pane {
+    -fx-text-fill: rgba(255, 255, 255, 1);
+    -fx-background-color: rgba(41, 46, 81, 0);
+}
+
+#settings {
+    -fx-text-fill: rgba(255, 255, 255, 0.5);
+}
+#settings SVGPath {
+    -fx-text-fill: rgba(255, 255, 255, 0.5);
+    -fx-fill: rgba(255, 255, 255, 0.5);
+}
+#settings:hover SVGPath {
+    -fx-text-fill: rgba(255, 255, 255, 0.5);
+    -fx-fill: rgba(255, 255, 255, 0.7);
+}
+#settings:hover {
+    -fx-text-fill: rgba(255, 255, 255, 0.7);
+}
+/*-- Фон сервера --*/
+#bgServer {
+    -fx-background-color: rgba(29, 29, 60, 1) !important;
+}
+#serverImage {
+    -fx-background-color: transparent;
+    -fx-background-size: cover;
+    -fx-background-image: url('../../images/servers/imageExample.png');
+}
+.namesText {
+    -fx-font-size: 16px;
+    -fx-font-family:"system";
+    -fx-text-align: left;
+    -fx-text-fill:rgba(255, 255, 255, 0.5);
+    }
+.bigNamesText {
+    -fx-font-size: 22px;
+    -fx-font-family:"system";
+    -fx-text-align: left;
+    -fx-text-fill:rgba(255, 255, 255, 1);
+}
+.serverNameText {
+    -fx-font-size: 26px;
+    -fx-font-family:"system";
+    -fx-text-align: left;
+    -fx-text-fill:rgba(255, 255, 255, 1);
+}
+/*-- DrLeonardo styles refactor --*/

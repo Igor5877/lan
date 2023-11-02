@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Arc?>
+
+<Pane id="h" fx:id="renewal" prefHeight="514.0" prefWidth="875.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+
+  <Pane fx:id="layout" layoutX="5.0" layoutY="4.0" prefHeight="507.0" prefWidth="867.0" styleClass="dones">
+      <ProgressIndicator layoutX="407.0" layoutY="227.0" prefHeight="85.0" prefWidth="87.0" scaleX="3.0" scaleY="3.0" />
+      <Arc id="spinner" fill="DODGERBLUE" layoutX="50.0" layoutY="466.0" length="270.0" startAngle="45.0" stroke="BLACK" strokeType="INSIDE" type="ROUND" visible="false" />
+
+  </Pane>
+
+  <stylesheets>
+    <URL value="@renewal.css" />
+  </stylesheets>
+</Pane>

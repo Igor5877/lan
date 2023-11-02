@@ -1,0 +1,185 @@
+/*-- DrLeonardo styles refactor --*/
+
+@import "../../styles/global.css";
+@import "../../styles/variables.css";
+
+/*-- Вывод данных --*/
+#settings-detail {
+    -fx-background-color: -fx-grayTr;
+    -fx-background-radius: 20px;
+}
+
+/* RAM настройки */
+.smallNamesText {
+    -fx-font-size: 18px;
+    -fx-font-family:"system";
+    -fx-text-align: left;
+    -fx-text-fill:rgba(255, 255, 255, 1);
+}
+.javaText {
+    -fx-font-size: 14px;
+    -fx-font-family:"system";
+    -fx-text-align: left;
+    -fx-text-fill:rgba(255, 255, 255, 0.5);
+}
+#ramLabel {
+    -fx-font-weight: bold;
+    -fx-font-size: 12px;
+    -fx-text-fill: rgba(255, 255, 255, 0.5);
+}
+#ramSlider > .track {
+    -fx-background-color: rgba(255, 255, 255, 0.5);
+    -fx-pref-height: 4px;
+}
+/* #ramSlider {
+    -fx-background-color: #00ff00; /* Змінити на ваш власний колір */
+
+#ramSlider > .thumb {
+    /* -fx-background-image: url('data:image/svg+xml,M 0 0 A 1 1 0 0 0 0 14 A 1 1 0 0 0 0 0'); */
+    -fx-background-color: #ff0000;
+    -fx-pref-width: 14px;
+    -fx-pref-height: 14px;
+}
+#ramSlider > .colored-track {
+    -fx-background-color: rgba(255, 255, 255, 0.5);
+    -fx-pref-height: 4px;
+}
+#ramSlider > .animated-thumb {
+    -fx-background-color: transparent;
+}
+#ramSlider > .slider-value {
+    -fx-fill: -fx-white;
+    -fx-stroke: -fx-white;
+}
+.ramtext {
+    -fx-font-size: 14px;
+    -fx-background-color: -fx-grayD;
+}
+#ramInfo {
+    -fx-font-size: 16px;
+    -fx-text-fill: -fx-grayD;
+}
+
+#restButton {
+    -fx-border-radius: 13px;
+    -fx-border-color: rgba(255, 255, 255, 1);
+    -fx-background-radius: 13px;
+    -fx-background-color: rgba(255, 255, 255, 0);
+    -fx-text-fill: rgba(255, 255, 255, 1);
+}
+#restButton SVGPath {
+    -fx-border-color: rgba(255, 255, 255, 0);
+    -fx-text-fill: rgba(255, 255, 255, 0.5);
+    -fx-fill: rgba(255, 255, 255, 1);
+}
+#restButton:hover {
+    -fx-background-color: rgba(255, 255, 255, 1);
+    -fx-text-fill: rgba(0, 0, 0, 1);
+}
+#restButton:hover SVGPath {
+    -fx-fill: rgba(0, 0, 0, 1);
+}
+#restButton:pressed {
+    -fx-border-color: rgba(255, 255, 255, 0);
+    -fx-background-color: rgba(255, 255, 255, 0.7);
+    -fx-fill: rgba(0, 0, 0, 1);
+}
+#saveButton {
+    -fx-background-radius: 13px;
+    -fx-background-color: rgba(255, 255, 255, 1);
+    -fx-text-fill: rgba(0, 0, 0, 1);
+}
+#saveButton SVGPath {
+    -fx-text-fill: rgba(255, 255, 255, 0.5);
+    -fx-fill: rgba(0, 0, 0, 1);
+}
+#saveButton:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.7);
+}
+#saveButton:pressed {
+    -fx-background-color: rgba(255, 255, 255, 0.5);
+}
+
+#changeDir {
+    -fx-border-radius: 13px;
+    -fx-border-color: rgba(255, 255, 255, 1);
+    -fx-background-radius: 13px;
+    -fx-background-color: rgba(255, 255, 255, 0);
+    -fx-text-fill: rgba(255, 255, 255, 1);
+}
+#changeDir SVGPath {
+    -fx-border-color: rgba(255, 255, 255, 0);
+    -fx-text-fill: rgba(255, 255, 255, 0.5);
+    -fx-fill: rgba(255, 255, 255, 1);
+}
+#changeDir:hover {
+    -fx-background-color: rgba(255, 255, 255, 1);
+    -fx-text-fill: rgba(0, 0, 0, 1);
+}
+#changeDir:hover SVGPath {
+    -fx-fill: rgba(0, 0, 0, 1);
+}
+#changeDir:pressed {
+    -fx-border-color: rgba(255, 255, 255, 0);
+    -fx-background-color: rgba(255, 255, 255, 0.7);
+    -fx-fill: rgba(0, 0, 0, 1);
+}
+/*-- Чекбоксы --*/
+.settings-container {
+    -fx-background-color: transparent;
+    -fx-padding: 15 0 0 15px;
+}
+.settings-checkbox {
+    -fx-text-fill: rgba(255, 255, 255, 0.5);
+    -fx-font-size: 18px;
+    -fx-font-family:"SemiBold";
+}
+.settings-label {
+    -fx-text-fill: rgba(255, 255, 255, 0.5);
+    -fx-font-size: 14px;
+    -fx-font-family:"regular";
+    -fx-label-padding: 0 20 0 0px;
+}
+
+/* Смена директорий */
+#folder {
+    -fx-background-color: -fx-gray;
+    -fx-background-radius: 0 0 20 20;
+    -fx-cursor: hand;
+}
+#patch {
+    -fx-font-size: 14px;
+    -fx-fill: -fx-grayD;
+}
+#patch:visited {
+    -fx-font-size: 14px;
+    -fx-fill: -fx-header;
+}
+
+
+
+/* Описание Java */
+#javaError {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-fill: -fx-red;
+    -fx-text-fill: -fx-red;
+}
+#javaSelect {
+    -fx-background-color: -fx-grayLTr;
+}
+#javaSelect > #javaHeader {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-fill: -fx-black2C;
+}
+#javaSelect > .javaDesc {
+    -fx-fill: -fx-black2C;
+    -fx-font-size: 12px;
+}
+#javaSelect > #javaPath {
+    -fx-font-size: 10px;
+    -fx-fill: -fx-grayD;
+}
+
+/*-- DrLeonardo styles refactor --*/

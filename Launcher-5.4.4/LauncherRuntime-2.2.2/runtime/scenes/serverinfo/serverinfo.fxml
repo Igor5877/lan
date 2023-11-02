@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.SVGPath?>
+
+<!-- DrLeonardo refactor -->
+
+<Pane prefHeight="500.0" prefWidth="850.0" styleClass="transparent" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <Pane fx:id="layout" prefHeight="500.0" prefWidth="850.0" styleClass="transparent">
+        <Pane id="leftPane" prefHeight="500.0" prefWidth="254.0" styleClass="leftPane">
+            <children>
+
+                <!-- Аватар игрока -->
+                <ImageView id="avatar" fitHeight="39.0" fitWidth="39.0" layoutX="24.0" layoutY="438.0" smooth="false">
+                    <Image url="@../../images/icons/default.png" />
+                </ImageView>
+
+                <!-- Никнейм игрока -->
+                <Label id="nickname" layoutX="62.0" layoutY="448.0" prefHeight="20.0" prefWidth="130.0" text="PLAYER123000000" underline="true">
+                    <padding>
+                        <Insets left="10.0" />
+                    </padding>
+                </Label>
+
+                <!-- Счет игрока -->
+                <Label id="money" layoutX="93.0" layoutY="50.0" prefHeight="20.0" prefWidth="282.0" text="100 МОНЕТ" visible="false">
+                    <padding>
+                        <Insets left="10.0" />
+                    </padding>
+                    <tooltip>
+                        <Tooltip id="moneyTooltip" text="%runtime.scenes.serverinfo.moneyTooltip" />
+                    </tooltip>
+                </Label>
+
+                <!-- Кнопка выхода -->
+                <Button id="deauth" alignment="CENTER" contentDisplay="CENTER" layoutX="198.0" layoutY="442.0" prefHeight="32.0" prefWidth="32.0" styleClass="icon-button" textAlignment="CENTER" textFill="#464646">
+                    <graphic>
+                        <SVGPath id="icons" content="M 3 1.25 C 2.536 1.25 2.0916719 1.4346719 1.7636719 1.7636719 C 1.4346719 2.0916719 1.25 2.536 1.25 3 L 1.25 13 C 1.25 13.464 1.4346719 13.908328 1.7636719 14.236328 C 2.0916719 14.565328 2.536 14.75 3 14.75 L 8 14.75 C 8.414 14.75 8.75 14.414 8.75 14 C 8.75 13.586 8.414 13.25 8 13.25 L 3 13.25 C 2.934 13.25 2.8692656 13.224734 2.8222656 13.177734 C 2.7752656 13.130734 2.75 13.066 2.75 13 L 2.75 3 C 2.75 2.934 2.7752656 2.8692656 2.8222656 2.8222656 C 2.8692656 2.7752656 2.934 2.75 3 2.75 L 8 2.75 C 8.414 2.75 8.75 2.414 8.75 2 C 8.75 1.586 8.414 1.25 8 1.25 L 3 1.25 z M 11.5 4.75 C 11.308 4.75 11.116703 4.8242031 10.970703 4.9707031 C 10.677703 5.2627031 10.677703 5.7372969 10.970703 6.0292969 L 12.189453 7.25 L 5 7.25 C 4.586 7.25 4.25 7.586 4.25 8 C 4.25 8.414 4.586 8.75 5 8.75 L 12.189453 8.75 L 10.970703 9.9707031 C 10.677703 10.262703 10.677703 10.737297 10.970703 11.029297 C 11.262703 11.322297 11.737297 11.322297 12.029297 11.029297 L 14.529297 8.5292969 C 14.822297 8.2362969 14.822297 7.7637031 14.529297 7.4707031 L 12.029297 4.9707031 C 11.883297 4.8242031 11.692 4.75 11.5 4.75 z" styleClass="icon-button-color" />
+                    </graphic>
+                    <tooltip>
+                        <Tooltip id="deauthTooltip" text="%runtime.scenes.servermenu.deauthTooltip" />
+                    </tooltip>
+                </Button>
+                <ImageView fitHeight="55.0" fitWidth="55.0" layoutX="28.0" layoutY="35.0">
+                    <image>
+                        <Image url="@../../images/icons/logo_big.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </Pane>
+
+        <Label id="nestLogo" layoutX="92.0" layoutY="43.0" prefHeight="36.0" prefWidth="172.0" styleClass="Bold" text="NestWorld" />
+
+        <!-- Кнопка настроек -->
+        <Button id="settings" layoutX="19.0" layoutY="245.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="199.0" styleClass="serverButtonText" text="Налаштування">
+            <graphic>
+                <Pane prefHeight="33.0" prefWidth="25.0">
+                <SVGPath content="M 24 4 C 22.423103 4 20.902664 4.1994284 19.451172 4.5371094 A 1.50015 1.50015 0 0 0 18.300781 5.8359375 L 17.982422 8.7382812 C 17.878304 9.6893592 17.328913 10.530853 16.5 11.009766 C 15.672739 11.487724 14.66862 11.540667 13.792969 11.15625 L 13.791016 11.15625 L 11.125 9.9824219 A 1.50015 1.50015 0 0 0 9.4257812 10.330078 C 7.3532865 12.539588 5.7626807 15.215064 4.859375 18.201172 A 1.50015 1.50015 0 0 0 5.4082031 19.845703 L 7.7734375 21.580078 C 8.5457929 22.147918 9 23.042801 9 24 C 9 24.95771 8.5458041 25.853342 7.7734375 26.419922 L 5.4082031 28.152344 A 1.50015 1.50015 0 0 0 4.859375 29.796875 C 5.7625845 32.782665 7.3519262 35.460112 9.4257812 37.669922 A 1.50015 1.50015 0 0 0 11.125 38.015625 L 13.791016 36.841797 C 14.667094 36.456509 15.672169 36.511947 16.5 36.990234 C 17.328913 37.469147 17.878304 38.310641 17.982422 39.261719 L 18.300781 42.164062 A 1.50015 1.50015 0 0 0 19.449219 43.460938 C 20.901371 43.799844 22.423103 44 24 44 C 25.576897 44 27.097336 43.800572 28.548828 43.462891 A 1.50015 1.50015 0 0 0 29.699219 42.164062 L 30.017578 39.261719 C 30.121696 38.310641 30.671087 37.469147 31.5 36.990234 C 32.327261 36.512276 33.33138 36.45738 34.207031 36.841797 L 36.875 38.015625 A 1.50015 1.50015 0 0 0 38.574219 37.669922 C 40.646713 35.460412 42.237319 32.782983 43.140625 29.796875 A 1.50015 1.50015 0 0 0 42.591797 28.152344 L 40.226562 26.419922 C 39.454197 25.853342 39 24.95771 39 24 C 39 23.04229 39.454197 22.146658 40.226562 21.580078 L 42.591797 19.847656 A 1.50015 1.50015 0 0 0 43.140625 18.203125 C 42.237319 15.217017 40.646713 12.539588 38.574219 10.330078 A 1.50015 1.50015 0 0 0 36.875 9.984375 L 34.207031 11.158203 C 33.33138 11.54262 32.327261 11.487724 31.5 11.009766 C 30.671087 10.530853 30.121696 9.6893592 30.017578 8.7382812 L 29.699219 5.8359375 A 1.50015 1.50015 0 0 0 28.550781 4.5390625 C 27.098629 4.2001555 25.576897 4 24 4 z M 24 7 C 24.974302 7 25.90992 7.1748796 26.847656 7.3398438 L 27.035156 9.0644531 C 27.243038 10.963375 28.346913 12.652335 30 13.607422 C 31.654169 14.563134 33.668094 14.673009 35.416016 13.904297 L 37.001953 13.207031 C 38.219788 14.669402 39.183985 16.321182 39.857422 18.130859 L 38.451172 19.162109 C 36.911538 20.291529 36 22.08971 36 24 C 36 25.91029 36.911538 27.708471 38.451172 28.837891 L 39.857422 29.869141 C 39.183985 31.678818 38.219788 33.330598 37.001953 34.792969 L 35.416016 34.095703 C 33.668094 33.326991 31.654169 33.436866 30 34.392578 C 28.346913 35.347665 27.243038 37.036625 27.035156 38.935547 L 26.847656 40.660156 C 25.910002 40.82466 24.973817 41 24 41 C 23.025698 41 22.09008 40.82512 21.152344 40.660156 L 20.964844 38.935547 C 20.756962 37.036625 19.653087 35.347665 18 34.392578 C 16.345831 33.436866 14.331906 33.326991 12.583984 34.095703 L 10.998047 34.792969 C 9.7799772 33.330806 8.8159425 31.678964 8.1425781 29.869141 L 9.5488281 28.837891 C 11.088462 27.708471 12 25.91029 12 24 C 12 22.08971 11.087719 20.290363 9.5488281 19.160156 L 8.1425781 18.128906 C 8.8163325 16.318532 9.7814501 14.667839 11 13.205078 L 12.583984 13.902344 C 14.331906 14.671056 16.345831 14.563134 18 13.607422 C 19.653087 12.652335 20.756962 10.963375 20.964844 9.0644531 L 21.152344 7.3398438 C 22.089998 7.1753403 23.026183 7 24 7 z M 24 16 C 19.599487 16 16 19.59949 16 24 C 16 28.40051 19.599487 32 24 32 C 28.400513 32 32 28.40051 32 24 C 32 19.59949 28.400513 16 24 16 z M 24 19 C 26.779194 19 29 21.220808 29 24 C 29 26.779192 26.779194 29 24 29 C 21.220806 29 19 26.779192 19 24 C 19 21.220808 21.220806 19 24 19 z" layoutX="-14.0" layoutY="-8.0" scaleX="0.5" scaleY="0.5" styleClass="icon-button-color" />
+                </Pane>
+            </graphic>
+            <tooltip>
+                <Tooltip id="settingsTooltip" text="%runtime.scenes.serverinfo.settingsTooltip" />
+            </tooltip>
+        </Button>
+        <Button id="site_button" layoutX="25.0" layoutY="115.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="142.0" styleClass="serverButtonText" text="Наш сайт">
+            <graphic>
+                <Pane prefHeight="33.0" prefWidth="25.0">
+                    <SVGPath content="M 12 2 C 6.4889971 2 2 6.4889971 2 12 C 2 17.511003 6.4889971 22 12 22 C 17.511003 22 22 17.511003 22 12 C 22 6.4889971 17.511003 2 12 2 z M 12 4 C 12.339469 4 12.671853 4.0276556 13 4.0683594 L 13 5.0078125 L 9.9921875 5.03125 C 9.4431875 5.03525 9 5.48225 9 6.03125 L 9 8 L 8 8 C 7.448 8 7 8.447 7 9 L 7 10.185547 L 4.9746094 8.1601562 C 6.3301094 5.6778228 8.9630577 4 12 4 z M 15 4.5839844 C 17.935098 5.7673596 20 8.6326468 20 12 C 20 13.535888 19.563612 14.963507 18.818359 16.179688 C 18.504078 15.486169 17.809779 15 17 15 L 16 15 L 16 13 C 16 12.447 15.552 12 15 12 L 9 12 L 9 10 L 10 10 C 10.552 10 11 9.553 11 9 L 11 7.0234375 L 13.015625 7.0078125 C 14.109625 7.0008125 15 6.1028125 15 5.0078125 L 15 4.5839844 z M 4.2050781 10.21875 L 9 15.013672 L 9 16 C 9 17.103 9.897 18 11 18 L 11 19.931641 C 7.0457719 19.441154 4 16.090654 4 12 C 4 11.386323 4.0752771 10.792211 4.2050781 10.21875 z M 10.779297 14 L 14 14 L 14 16 C 14 16.553 14.448 17 15 17 L 17 17 L 17 18.248047 C 15.876599 19.14719 14.50453 19.745017 13 19.931641 L 13 17 C 13 16.447 12.552 16 12 16 L 11 16 L 11 14.599609 C 11 14.377758 10.91261 14.173249 10.779297 14 z" layoutX="-3.0" layoutY="4.0" scaleX="0.9" scaleY="0.9" styleClass="iconButtonLeft" />
+                </Pane>
+            </graphic>
+        </Button>
+        <Button id="vote_button" layoutX="24.0" layoutY="180.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="172.0" styleClass="serverButtonText" text="Голосування">
+            <graphic>
+                <Pane prefHeight="33.0" prefWidth="25.0">
+                    <SVGPath content="M 13.03125 1.15625 C 12.957031 1.160156 12.882813 1.167969 12.8125 1.1875 C 12.496094 1.25 12.230469 1.457031 12.09375 1.75 L 8.84375 8.375 L 1.46875 9.46875 C 1.105469 9.535156 0.804688 9.796875 0.695313 10.152344 C 0.582031 10.507813 0.675781 10.894531 0.9375 11.15625 L 6.21875 16.34375 L 5 23.65625 C 4.9375 24.027344 5.085938 24.40625 5.390625 24.632813 C 5.695313 24.855469 6.101563 24.890625 6.4375 24.71875 L 13 21.25 L 19.5625 24.71875 C 19.898438 24.890625 20.304688 24.855469 20.609375 24.632813 C 20.914063 24.40625 21.0625 24.027344 21 23.65625 L 19.78125 16.34375 L 25.0625 11.15625 C 25.324219 10.894531 25.417969 10.507813 25.304688 10.152344 C 25.195313 9.796875 24.894531 9.535156 24.53125 9.46875 L 17.15625 8.375 L 13.90625 1.75 C 13.75 1.402344 13.414063 1.171875 13.03125 1.15625 Z M 13 4.46875 L 15.625 9.75 C 15.773438 10.039063 16.054688 10.238281 16.375 10.28125 L 22.21875 11.15625 L 18 15.28125 C 17.757813 15.503906 17.640625 15.832031 17.6875 16.15625 L 18.6875 22 L 13.46875 19.25 C 13.175781 19.09375 12.824219 19.09375 12.53125 19.25 L 7.3125 22 L 8.3125 16.15625 C 8.359375 15.832031 8.242188 15.503906 8 15.28125 L 3.78125 11.15625 L 9.625 10.28125 C 9.945313 10.238281 10.226563 10.039063 10.375 9.75 Z" layoutX="-3.0" layoutY="3.0" scaleX="0.8" scaleY="0.8" styleClass="iconButtonLeft" />
+                </Pane>
+            </graphic>
+        </Button>
+        <Pane id="bgServer" layoutX="254.0" prefHeight="500.0" prefWidth="596.0">
+            <children>
+                <Button id="playgames" layoutX="428.0" layoutY="436.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="145.0" text="Грати">
+                    <graphic>
+                        <Pane prefHeight="23.0" prefWidth="23.0">
+                            <SVGPath content="M 12 2 C 6.477 2 2 6.477 2 12 c 0 5.523 4.477 10 10 10 s 10 -4.477 10 -10 C 22 6.477 17.523 2 12 2 Z M 10 15.5 v -7 c 0 -0.412 0.47 -0.647 0.8 -0.4 l 4.667 3.5 c 0.267 0.2 0.267 0.6 0 0.8 L 10.8 15.9 C 10.47 16.147 10 15.912 10 15.5 Z" layoutX="-1.0" scaleX="0.8" scaleY="0.8" styleClass="iconButtonLeft" />
+                        </Pane>
+                    </graphic>
+                </Button>
+                <Label id="serverName" layoutX="48.0" layoutY="57.0" prefHeight="37.0" prefWidth="190.0" text="ServerName" />
+
+                <ImageView fitHeight="401.0" fitWidth="226.0" layoutX="20.0" layoutY="75.0">
+                    <image>
+                        <Image url="@../../images/servers/serverInfo_example.png" />
+                    </image>
+                </ImageView>
+
+                <!-- Кнопка опциональных модов -->
+                <Button id="clientSettings" layoutX="270.0" layoutY="436.0" prefHeight="40.0" prefWidth="145.0" styleClass="icon-button" text="Моди">
+                    <tooltip>
+                        <Tooltip id="modsTooltip" text="%runtime.scenes.serverinfo.modsTooltip" />
+                    </tooltip>
+                    <graphic>
+                        <Pane prefHeight="19.0" prefWidth="20.0">
+                            <SVGPath content="M 15 3 C 8.373 3 3 8.373 3 15 c 0 6.627 5.373 12 12 12 s 12 -5.373 12 -12 C 27 8.373 21.627 3 15 3 Z M 21 16 h -5 v 5 c 0 0.553 -0.448 1 -1 1 s -1 -0.447 -1 -1 v -5 H 9 c -0.552 0 -1 -0.447 -1 -1 s 0.448 -1 1 -1 h 5 V 9 c 0 -0.553 0.448 -1 1 -1 s 1 0.447 1 1 v 5 h 5 c 0.552 0 1 0.447 1 1 S 21.552 16 21 16 Z" layoutX="-5.0" layoutY="-5.0" scaleX="0.65" scaleY="0.65" styleClass="header-button" />
+                        </Pane>
+                    </graphic>
+                </Button>
+                <!-- Навбар -->
+                <Pane id="header" prefHeight="69.0" prefWidth="596.0">
+                    <children>
+
+                        <!-- Кнопка назад -->
+                        <Button id="back" layoutX="20.0" layoutY="23.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="99.0" styleClass="icon-button" text="Назад">
+                            <graphic>
+                                <Pane prefHeight="33.0" prefWidth="29.0">
+                                    <SVGPath content="M 13.082 12.9805 C 12.4922 12.9609 11.9258 13.2031 11.5313 13.6406 L 1.0234 25 L 11.5313 36.3594 C 12.0117 36.8945 12.7461 37.1328 13.4531 36.9766 C 14.1563 36.8203 14.7227 36.2969 14.9336 35.6055 C 15.1445 34.9141 14.9688 34.1641 14.4688 33.6406 L 8.3242 27 L 37 27 C 38.608 26.982 39 26 39 26 C 39.787 24.852 39 24 39 24 C 39 24 38.572 23.023 37 23 L 8.3242 23 L 14.4688 16.3594 C 15.0117 15.7852 15.168 14.9492 14.8672 14.2188 C 14.5703 13.4922 13.8711 13.0039 13.082 12.9805 Z" layoutX="-8.0" layoutY="-8.0" scaleX="0.6" scaleY="0.6" styleClass="icon-button-color" />
+                                </Pane>
+                            </graphic>
+                            <tooltip>
+                                <Tooltip id="backTooltip" text="%runtime.scenes.serverinfo.backTooltip" />
+                            </tooltip>
+                        </Button>
+
+                        <!-- Кнопки управления -->
+                        <Pane id="controls" layoutX="519.0" layoutY="7.0" prefHeight="39.0" prefWidth="70.0">
+                            <children>
+
+                                <!-- Кнопка закрыть -->
+                                <Button id="exit" graphicTextGap="0.0" layoutX="34.0" layoutY="4.0" mnemonicParsing="false" styleClass="icon-button">
+                                    <graphic>
+                                        <SVGPath content="M 0 0 L 0 1 L 5 6 L 6 5 L 1 0 L 6 -5 L 5 -6 L 0 -1 L -5 -6 L -6 -5 L -1 0 L -6 5 L -5 6 L 0 1" styleClass="icon-button-color" />
+                                    </graphic>
+                                    <tooltip>
+                                        <Tooltip id="exitTooltip" text="%runtime.scenes.login.exitTooltip" />
+                                    </tooltip>
+                                </Button>
+
+                                <!-- Кнопка свернуть -->
+                                <Button id="minimize" layoutX="2.0" layoutY="9.0" mnemonicParsing="false" styleClass="icon-button">
+                                    <graphic>
+                                        <SVGPath content="M 0 1 L 0 1 L -5 1 L -5 -1 L 5 -1 L 5 1 L 0 1" styleClass="icon-button-color" />
+                                    </graphic>
+                                    <tooltip>
+                                        <Tooltip id="minimizeTooltip" text="%runtime.scenes.login.minimizeTooltip" />
+                                    </tooltip>
+                                </Button>
+                            </children>
+                        </Pane>
+                  <Label layoutX="135.0" layoutY="22.0" prefHeight="31.0" prefWidth="199.0" styleClass="bigNamesText" text="Описання сервера" />
+                    </children>
+                </Pane>
+            <ScrollPane layoutX="268.0" layoutY="239.0" prefHeight="150.0" prefWidth="311.0">
+               <content>
+                        <Label id="serverDescription" alignment="TOP_LEFT" prefHeight="150.0" prefWidth="300.0" text="Server Description" wrapText="true" />
+               </content>
+            </ScrollPane>
+            <Label layoutX="270.0" layoutY="135.0" styleClass="namesText" text="Версiя:" />
+            <Label layoutX="358.0" layoutY="135.0" styleClass="namesText" text="Режим-пвп:" />
+            <Label layoutX="480.0" layoutY="135.0" styleClass="namesText" text="Складність:" />
+            <Label id="version" layoutX="270.0" layoutY="160.0" styleClass="bigNamesText" text="1.7.10" />
+            <Label id="pvp" layoutX="358.0" layoutY="160.0" styleClass="bigNamesText" text="PVE-PVP" />
+            <Label id="difficulty" layoutX="480.0" layoutY="160.0" styleClass="bigNamesText" text="MEDIUM" />
+            <Label layoutX="270.0" layoutY="214.0" styleClass="namesText" text="Описання:" />
+            <Label id="servername" layoutX="270.0" layoutY="75.0" prefHeight="36.0" prefWidth="302.0" styleClass="bigNamesText" text="ServerName" />
+            </children>
+        </Pane>
+
+    </Pane>
+
+    <!-- Подключение стилей-->
+    <stylesheets>
+        <URL value="@serverinfo.css" />
+        <URL value="@../../styles/global.css" />
+        <URL value="@../../styles/variables.css" />
+    </stylesheets>
+
+</Pane>

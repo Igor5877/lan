@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+
+<!-- DrLeonardo refactor -->
+
+<Pane fx:id="settingsPane" prefHeight="500.0" prefWidth="850.0" styleClass="transparent, blur" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+
+    <Pane id="leftPane" prefHeight="500.0" prefWidth="254.0" styleClass="leftPane">
+        <children>
+
+            <!-- Аватар игрока -->
+            <ImageView id="avatar" fitHeight="39.0" fitWidth="39.0" layoutX="24.0" layoutY="438.0" smooth="false">
+                <Image url="@../../images/icons/default.png" />
+            </ImageView>
+
+            <!-- Никнейм игрока -->
+            <Label id="nickname" layoutX="62.0" layoutY="448.0" prefHeight="20.0" prefWidth="130.0" text="PLAYER123000000" underline="true">
+                <padding>
+                    <Insets left="10.0" />
+                </padding>
+            </Label>
+
+            <!-- Счет игрока -->
+            <Label id="money" layoutX="93.0" layoutY="50.0" prefHeight="20.0" prefWidth="282.0" text="100 МОНЕТ" visible="false">
+                <padding>
+                    <Insets left="10.0" />
+                </padding>
+                <tooltip>
+                    <Tooltip id="moneyTooltip" text="%runtime.scenes.serverinfo.moneyTooltip" />
+                </tooltip>
+            </Label>
+
+            <!-- Кнопка выхода -->
+            <Button id="deauth" alignment="CENTER" contentDisplay="CENTER" layoutX="198.0" layoutY="442.0" prefHeight="32.0" prefWidth="32.0" styleClass="icon-button" textAlignment="CENTER" textFill="#464646">
+                <graphic>
+                    <SVGPath id="icons" content="M 3 1.25 C 2.536 1.25 2.0916719 1.4346719 1.7636719 1.7636719 C 1.4346719 2.0916719 1.25 2.536 1.25 3 L 1.25 13 C 1.25 13.464 1.4346719 13.908328 1.7636719 14.236328 C 2.0916719 14.565328 2.536 14.75 3 14.75 L 8 14.75 C 8.414 14.75 8.75 14.414 8.75 14 C 8.75 13.586 8.414 13.25 8 13.25 L 3 13.25 C 2.934 13.25 2.8692656 13.224734 2.8222656 13.177734 C 2.7752656 13.130734 2.75 13.066 2.75 13 L 2.75 3 C 2.75 2.934 2.7752656 2.8692656 2.8222656 2.8222656 C 2.8692656 2.7752656 2.934 2.75 3 2.75 L 8 2.75 C 8.414 2.75 8.75 2.414 8.75 2 C 8.75 1.586 8.414 1.25 8 1.25 L 3 1.25 z M 11.5 4.75 C 11.308 4.75 11.116703 4.8242031 10.970703 4.9707031 C 10.677703 5.2627031 10.677703 5.7372969 10.970703 6.0292969 L 12.189453 7.25 L 5 7.25 C 4.586 7.25 4.25 7.586 4.25 8 C 4.25 8.414 4.586 8.75 5 8.75 L 12.189453 8.75 L 10.970703 9.9707031 C 10.677703 10.262703 10.677703 10.737297 10.970703 11.029297 C 11.262703 11.322297 11.737297 11.322297 12.029297 11.029297 L 14.529297 8.5292969 C 14.822297 8.2362969 14.822297 7.7637031 14.529297 7.4707031 L 12.029297 4.9707031 C 11.883297 4.8242031 11.692 4.75 11.5 4.75 z" styleClass="icon-button-color" />
+                </graphic>
+                <tooltip>
+                    <Tooltip id="deauthTooltip" text="%runtime.scenes.servermenu.deauthTooltip" />
+                </tooltip>
+            </Button>
+            <ImageView fitHeight="55.0" fitWidth="55.0" layoutX="28.0" layoutY="35.0">
+                <image>
+                    <Image url="@../../images/icons/logo_big.png" />
+                </image>
+            </ImageView>
+        </children>
+    </Pane>
+
+    <Label id="nestLogo" layoutX="92.0" layoutY="43.0" prefHeight="36.0" prefWidth="172.0" styleClass="Bold" text="NestWorld" />
+
+    <!-- Кнопка настроек -->
+    <Button id="site_button" layoutX="25.0" layoutY="115.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="142.0" styleClass="serverButtonText" text="Наш сайт">
+        <graphic>
+            <Pane prefHeight="33.0" prefWidth="25.0">
+                <SVGPath content="M 12 2 C 6.4889971 2 2 6.4889971 2 12 C 2 17.511003 6.4889971 22 12 22 C 17.511003 22 22 17.511003 22 12 C 22 6.4889971 17.511003 2 12 2 z M 12 4 C 12.339469 4 12.671853 4.0276556 13 4.0683594 L 13 5.0078125 L 9.9921875 5.03125 C 9.4431875 5.03525 9 5.48225 9 6.03125 L 9 8 L 8 8 C 7.448 8 7 8.447 7 9 L 7 10.185547 L 4.9746094 8.1601562 C 6.3301094 5.6778228 8.9630577 4 12 4 z M 15 4.5839844 C 17.935098 5.7673596 20 8.6326468 20 12 C 20 13.535888 19.563612 14.963507 18.818359 16.179688 C 18.504078 15.486169 17.809779 15 17 15 L 16 15 L 16 13 C 16 12.447 15.552 12 15 12 L 9 12 L 9 10 L 10 10 C 10.552 10 11 9.553 11 9 L 11 7.0234375 L 13.015625 7.0078125 C 14.109625 7.0008125 15 6.1028125 15 5.0078125 L 15 4.5839844 z M 4.2050781 10.21875 L 9 15.013672 L 9 16 C 9 17.103 9.897 18 11 18 L 11 19.931641 C 7.0457719 19.441154 4 16.090654 4 12 C 4 11.386323 4.0752771 10.792211 4.2050781 10.21875 z M 10.779297 14 L 14 14 L 14 16 C 14 16.553 14.448 17 15 17 L 17 17 L 17 18.248047 C 15.876599 19.14719 14.50453 19.745017 13 19.931641 L 13 17 C 13 16.447 12.552 16 12 16 L 11 16 L 11 14.599609 C 11 14.377758 10.91261 14.173249 10.779297 14 z" layoutX="-3.0" layoutY="4.0" scaleX="0.9" scaleY="0.9" styleClass="iconButtonLeft" />
+            </Pane>
+        </graphic>
+    </Button>
+    <Button id="vote_button" layoutX="24.0" layoutY="180.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="172.0" styleClass="serverButtonText" text="Голосування">
+        <graphic>
+            <Pane prefHeight="33.0" prefWidth="25.0">
+                <SVGPath content="M 13.03125 1.15625 C 12.957031 1.160156 12.882813 1.167969 12.8125 1.1875 C 12.496094 1.25 12.230469 1.457031 12.09375 1.75 L 8.84375 8.375 L 1.46875 9.46875 C 1.105469 9.535156 0.804688 9.796875 0.695313 10.152344 C 0.582031 10.507813 0.675781 10.894531 0.9375 11.15625 L 6.21875 16.34375 L 5 23.65625 C 4.9375 24.027344 5.085938 24.40625 5.390625 24.632813 C 5.695313 24.855469 6.101563 24.890625 6.4375 24.71875 L 13 21.25 L 19.5625 24.71875 C 19.898438 24.890625 20.304688 24.855469 20.609375 24.632813 C 20.914063 24.40625 21.0625 24.027344 21 23.65625 L 19.78125 16.34375 L 25.0625 11.15625 C 25.324219 10.894531 25.417969 10.507813 25.304688 10.152344 C 25.195313 9.796875 24.894531 9.535156 24.53125 9.46875 L 17.15625 8.375 L 13.90625 1.75 C 13.75 1.402344 13.414063 1.171875 13.03125 1.15625 Z M 13 4.46875 L 15.625 9.75 C 15.773438 10.039063 16.054688 10.238281 16.375 10.28125 L 22.21875 11.15625 L 18 15.28125 C 17.757813 15.503906 17.640625 15.832031 17.6875 16.15625 L 18.6875 22 L 13.46875 19.25 C 13.175781 19.09375 12.824219 19.09375 12.53125 19.25 L 7.3125 22 L 8.3125 16.15625 C 8.359375 15.832031 8.242188 15.503906 8 15.28125 L 3.78125 11.15625 L 9.625 10.28125 C 9.945313 10.238281 10.226563 10.039063 10.375 9.75 Z" layoutX="-3.0" layoutY="3.0" scaleX="0.8" scaleY="0.8" styleClass="iconButtonLeft" />
+            </Pane>
+        </graphic>
+    </Button>
+
+    <!-- Навбар -->
+    <Pane id="header" layoutX="254.0" prefHeight="69.0" prefWidth="596.0">
+        <children>
+
+            <!-- Кнопки управления -->
+            <Pane id="controls" layoutX="521.0" layoutY="7.0" prefHeight="39.0" prefWidth="70.0">
+                <children>
+
+                    <!-- Кнопка закрыть -->
+                    <Button id="exit" graphicTextGap="0.0" layoutX="34.0" layoutY="4.0" mnemonicParsing="false" styleClass="icon-button">
+                        <graphic>
+                            <SVGPath content="M 0 0 L 0 1 L 5 6 L 6 5 L 1 0 L 6 -5 L 5 -6 L 0 -1 L -5 -6 L -6 -5 L -1 0 L -6 5 L -5 6 L 0 1" styleClass="icon-button-color" />
+                        </graphic>
+                        <tooltip>
+                            <Tooltip id="exitTooltip" text="%runtime.scenes.login.exitTooltip" />
+                        </tooltip>
+                    </Button>
+
+                    <!-- Кнопка свернуть -->
+                    <Button id="minimize" layoutX="2.0" layoutY="9.0" mnemonicParsing="false" styleClass="icon-button">
+                        <graphic>
+                            <SVGPath content="M 0 1 L 0 1 L -5 1 L -5 -1 L 5 -1 L 5 1 L 0 1" styleClass="icon-button-color" />
+                        </graphic>
+                        <tooltip>
+                            <Tooltip id="minimizeTooltip" text="%runtime.scenes.login.minimizeTooltip" />
+                        </tooltip>
+                    </Button>
+                </children>
+            </Pane>
+
+
+            
+            <!-- Счет игрока -->
+            <Label id="role" layoutX="93.0" layoutY="50.0" prefHeight="20.0" prefWidth="282.0">
+                <padding>
+                    <Insets left="10.0" />
+                </padding>
+                <tooltip>
+                    <Tooltip id="moneyTooltip" text="%runtime.scenes.servermenu.moneyTooltip" />
+                </tooltip>
+            </Label>
+            <Label id="1" layoutX="27.0" layoutY="22.0" styleClass="tittle" text="Налаштування NestTech" textOverrun="CLIP" />
+        </children>
+    </Pane>
+
+    <Button id="saveButton" layoutX="711.0" layoutY="436.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="115.0" text="Зберегти" />
+    <Button id="restButton" layoutX="584.0" layoutY="436.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="115.0" text="Скинути" />
+    <ScrollPane id="settingslist" layoutX="553.0" layoutY="115.0" prefHeight="215.0" prefWidth="288.0">
+        <VBox fx:id="componentList" prefHeight="217.0" prefWidth="272.0">
+            <VBox styleClass="settings-container">
+                <CheckBox mnemonicParsing="false" styleClass="settings-checkbox" text="Для ознакомления" />
+                <Label styleClass="settings-label" text="Включає режим &#10;налагодження клієнта" wrapText="true" />
+            </VBox>
+            <VBox styleClass="settings-container">
+                <CheckBox mnemonicParsing="false" selected="true" styleClass="settings-checkbox" text="Для ознакомления" />
+                <Label styleClass="settings-label" text="Пример описания" wrapText="true" />
+            </VBox>
+            <VBox styleClass="settings-container">
+                <CheckBox mnemonicParsing="false" selected="true" styleClass="settings-checkbox" text="Для ознакомления" />
+                <Label alignment="TOP_LEFT" styleClass="settings-label" text="Запускати гру в режимі повноекранного&#10; перегляду&#10;" wrapText="true" />
+            </VBox>
+        </VBox>
+    </ScrollPane>
+    <ComboBox id="javaCombo" layoutX="274.0" layoutY="164.0" prefWidth="248.0" styleClass="combo-box" />
+    <!-- Путь к папкам-->
+    <Hyperlink id="path" focusTraversable="false" layoutX="274.0" layoutY="301.0" prefHeight="40.0" prefWidth="248.0" text="C:/Users">
+        <padding>
+            <Insets left="28.0" right="10.0" />
+        </padding>
+    </Hyperlink>
+
+    <!-- Смена пути-->
+    <Button id="changeDir" alignment="BASELINE_CENTER" contentDisplay="RIGHT" layoutX="274.0" layoutY="362.0" prefHeight="40.0" prefWidth="123.0" styleClass="icon-button" text="Зміна папки">
+        <tooltip>
+            <Tooltip id="changedirTooltip" text="%runtime.scenes.settings.changedirTooltip" />
+        </tooltip>
+    </Button>
+    <Label id="javaHeader" layoutX="274.0" layoutY="75.0" prefHeight="25.0" prefWidth="39.0" styleClass="smallNamesText" text="Java" />
+    <Slider id="ramSlider" layoutX="274.0" layoutY="463.0" prefHeight="7.0" prefWidth="262.0" />
+
+    <!-- Настройки RAM -->
+    <Label id="ramLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="384.0" layoutY="433.0" prefHeight="20.0" text="2400 МБайт" />
+    <Label layoutX="274.0" layoutY="112.0" styleClass="javaText" text="Виберіть Java за допомогою &#10;якої ви запустите клієнт.&#10;" />
+   <Label layoutX="570.0" layoutY="75.0" styleClass="smallNamesText" text="Налаштування лаунчера" />
+   <Label layoutX="274.0" layoutY="252.0" styleClass="smallNamesText" text="Зміна шляху установки" />
+   <Label id="javaError" layoutX="327.0" layoutY="207.0" prefHeight="20.0" prefWidth="130.0" text="%runtime.scenes.settings.javaError" textAlignment="RIGHT" visible="false" />
+   <Hyperlink id="javaPath" focusTraversable="false" layoutX="261.0" layoutY="207.0" prefHeight="40.0" prefWidth="248.0" text="C:/Users" visible="false">
+      <padding>
+         <Insets left="28.0" right="10.0" />
+      </padding>
+   </Hyperlink>
+
+    <!-- Подключение стилей-->
+    <stylesheets>
+        <URL value="@settings.css" />
+        <URL value="@../../styles/global.css" />
+        <URL value="@../../styles/variables.css" />
+    </stylesheets>
+
+</Pane>
